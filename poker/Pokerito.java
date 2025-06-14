@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Pokerito {
     public static void main(String[] args) {
-        //Task 2: Explain the rules. See the article 'Pokerito'
         Scanner scan = new Scanner(System.in);
         System.out.println("Let's play Pokerito. Type anything when you're ready.");
         scan.nextLine();
@@ -19,14 +18,6 @@ public class Pokerito {
         String yourCard = randomCard();
         String computerCard = randomCard();
 
-
-        /*Task 3: Present the user with a card
-         Here's your card: 
-         <show card>
-         <new line>
-         Here's the computer's card: 
-         <show computer's card>
-        */
         System.out.println("Here's your card: ");
         System.out.println(yourCard);
         System.out.println("\nHere's the computer's card: ");
@@ -36,19 +27,7 @@ public class Pokerito {
         int yourMatches = 0;
         int computerMatches =0;
 
-        /** Task 4 - Draw five cards
-         * 
-         * • print:  Now, the dealer will draw five cards. Press enter to continue.
-         * • The dealer will draw a card every time the user presses enter.
-         * • Before you draw a card, print the order it was drawn in:
-         *      Card 1 
-         *      <2 new lines>
-         *      <print card>
-         *      Card 2
-         *      <2 new lines>
-         *      <print card>
-         *      ...
-         */
+      
         System.out.println("Now, the dealer will draw five cards. Press enter to continue.");
         for (int i = 1; i <= 5; i++) {
             scan.nextLine();
@@ -66,17 +45,7 @@ public class Pokerito {
 
         }
 
-        /** Task 5 - Get the winner
-         * 
-         * • Count your number of matches.
-         * • Count the computer's number of matches.
-         * • print: Your number of matches: <yourMatches>
-         * • print: Computer number of matches:  <computerMatches>
-         * 
-         * • If you have more matches, print: You win!. 
-         * • If the computer has more matches, print: The computer wins! 
-         * • If the matches are equal, print: everyone wins!.
-         */
+       
         System.out.println("Your number of matches: " + yourMatches);
         System.out.println("Computer number of matches: " + computerMatches);
 
@@ -91,15 +60,7 @@ public class Pokerito {
          scan.close();
     }
 
-    /** Task 1
-     * 
-     * Function name – randomCard
-     * @return (String)
-     * 
-     * Inside the function:
-     *   1. Gets a random number between 1 and 13.
-     *   2. Returns a card that matches the random number.   
-     */
+   
     public static String randomCard() {
         double randomNumber = Math.random() * 13;
         randomNumber += 1;
